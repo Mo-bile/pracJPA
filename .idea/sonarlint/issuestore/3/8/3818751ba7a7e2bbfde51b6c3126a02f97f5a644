@@ -1,7 +1,8 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(Á×Ë²ùÿÿÿÿ8³ª®¨²2
-X	java:S125%"<This block of commented-out lines of code should be removed.(ŞÀó8´ª®¨²2
-]	java:S125,"<This block of commented-out lines of code should be removed.(Äùğùÿÿÿÿ8´ª®¨²2
-L	java:S106>"+Replace this use of System.out by a logger.(Úú°Êûÿÿÿÿ8¶ª®¨²2
+]	java:S125"<This block of commented-out lines of code should be removed.(Á×Ë²ùÿÿÿÿ8–Ğì¨²2
+X	java:S125%"<This block of commented-out lines of code should be removed.(ŞÀó8—Ğì¨²2
+]	java:S125,"<This block of commented-out lines of code should be removed.(Äùğùÿÿÿÿ8—Ğì¨²2
+X	java:S1258"<This block of commented-out lines of code should be removed.(€ıê8—Ğì¨²2
+L	java:S106E"+Replace this use of System.out by a logger.(Úú°Êûÿÿÿÿ8˜Ğì¨²2
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8·ª®¨²2
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8šĞì¨²2

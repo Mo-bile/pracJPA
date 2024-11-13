@@ -53,15 +53,20 @@ public class JpaMain {
 //            System.out.println("==========");
 
             // dirty checking
-            Member member = em.find(Member.class, 150L);
-            member.setName("zzzzz2");
+//            Member member = em.find(Member.class, 150L);
+//            member.setName("zzzzz2");
+//
+////            em.persist(member); // 이거 해야할거같지만 할필요없음
+//            //jpa 목적은 자바 컬렉션 처럼 이용하는것이 주요목적임
+//            // 컬렉션 꺼내고 다시 넣을필요없는것처럼!!!
+//            System.out.println("==========");
 
-//            em.persist(member); // 이거 해야할거같지만 할필요없음
-            //jpa 목적은 자바 컬렉션 처럼 이용하는것이 주요목적임
-            // 컬렉션 꺼내고 다시 넣을필요없는것처럼!!!
+            Member member = new Member(200L, "member200");
+            em.persist(member);
+            // 영컨에 담음
+            em.flush();
+            // 여기서 바로 db에 반영되어버림
             System.out.println("==========");
-
-
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
