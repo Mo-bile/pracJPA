@@ -27,3 +27,5 @@ Zsrc/main/.idea/sonarlint/securityhotspotstore/f/2/f2dbdbd4ff3892aefdab9a25b54b4
 Psrc/main/.idea/sonarlint/issuestore/f/2/f2dbdbd4ff3892aefdab9a25b54b43a44462a9d7,f/2/f2959aa24526f86f6ee235f16b37dfccc269a13e
 f
 6src/main/.idea/sonarlint/securityhotspotstore/index.pb,8/c/8c794dd2d8a4911897fd1dd51e010bc6f1ecfc48
+T
+$src/main/java/RoleType/RoleType.java,3/0/30ca6be2993503c5c0b3db86994ccc53443ee737

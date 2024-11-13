@@ -1,5 +1,3 @@
 
-S
-java:S1128"7Remove this unused import 'jakarta.persistence.Column'.(Ó‰ÙE8ËÍ£¨²2
-S
-java:S1128"6Remove this unused import 'jakarta.persistence.Table'.(Ÿ£‘ã8ËÍ£¨²2
+ž
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(á£˜‚8÷þº¬²2
