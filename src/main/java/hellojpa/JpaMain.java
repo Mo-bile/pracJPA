@@ -14,15 +14,53 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction(); // 모든 변경은 트랜잭션 안에서 해야함
         tx.begin();
         try {
-            //비영속 상태!!!!!!!!
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("Hello");
 
-            // 영속 상태로!!! // 전,후 사이에 쿼리가 안나옴
-            System.out.println("=== BEFORE ===");
-            em.persist(member);
-            System.out.println("=== AFTER ===");
+            // 1차 캐시에서 조회
+//            //비영속 상태!!!!!!!!
+//            Member member = new Member();
+//            member.setId(101L);
+//            member.setName("HelloJPA");
+//
+//            // 영속 상태로!!! // 전,후 사이에 쿼리가 안나옴
+//            System.out.println("=== BEFORE ===");
+//            // 저장시 1차 캐시에 저장됨
+//            em.persist(member);
+//            System.out.println("=== AFTER ===");
+//
+//            // select 쿼리가 안나감 -> 1차 캐시를 조회함
+//            Member findMember = em.find(Member.class, 101L);
+//            System.out.println("findMember.id = " + findMember.getId());
+//            System.out.println("findMember.name = " + findMember.getName());
+
+            // 두번째 멤버2는 1차캐시에서 가져옴
+            // 조회만 하면 영속성 컨텍스트에 올림
+//            Member findMember1 = em.find(Member.class, 101L);
+//            Member findMember2 = em.find(Member.class, 101L);
+//
+//            // 영속 엔티티의 동일성 보장
+//            System.out.println("result = " + (findMember1 == findMember2)); //true 가 나옴
+
+            // 트랜잭션 지원하는 쓰기 지원
+//            Member member1 = new Member(150L, "A");
+//            Member member2 = new Member(160L, "B");
+//
+//            em.persist(member1);
+//            em.persist(member2);
+//            //선이 그어지고 쿼리가 두개 나감
+//            // 위 두개 그때 마다 나가면 최적화 어려움이 있음
+//            // 두개를 한꺼번에! Himbernate 에 기능이있
+//            // batch_size 로서!!! -> 버퍼링 모아서 write하기!!
+//            System.out.println("==========");
+
+            // dirty checking
+            Member member = em.find(Member.class, 150L);
+            member.setName("zzzzz2");
+
+//            em.persist(member); // 이거 해야할거같지만 할필요없음
+            //jpa 목적은 자바 컬렉션 처럼 이용하는것이 주요목적임
+            // 컬렉션 꺼내고 다시 넣을필요없는것처럼!!!
+            System.out.println("==========");
+
 
             tx.commit();
         } catch (Exception e) {

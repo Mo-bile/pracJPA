@@ -1,5 +1,7 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(£»ÂÊ8ÖìÕÛ±2
-L	java:S106"+Replace this use of System.out by a logger.(¹ñ»“ÿÿÿÿÿ8×†×Û±2
+]	java:S125"<This block of commented-out lines of code should be removed.(Á×Ë²ùÿÿÿÿ8³ª®¨²2
+X	java:S125%"<This block of commented-out lines of code should be removed.(ŞÀó8´ª®¨²2
+]	java:S125,"<This block of commented-out lines of code should be removed.(Äùğùÿÿÿÿ8´ª®¨²2
+L	java:S106>"+Replace this use of System.out by a logger.(Úú°Êûÿÿÿÿ8¶ª®¨²2
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8¼«ÒÛ±2
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8·ª®¨²2

@@ -12,8 +12,17 @@ public class Member {
     @Id
     private Long id;
 
-//    @Column(name = "usename")
+    //    @Column(name = "usename")
     private String name;
+
+    //  JPA자체 때문에 기본생성자가 필요함
+    public Member(){
+
+    }
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
