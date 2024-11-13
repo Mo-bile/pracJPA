@@ -61,12 +61,26 @@ public class JpaMain {
 //            // 컬렉션 꺼내고 다시 넣을필요없는것처럼!!!
 //            System.out.println("==========");
 
-            Member member = new Member(200L, "member200");
-            em.persist(member);
-            // 영컨에 담음
-            em.flush();
-            // 여기서 바로 db에 반영되어버림
-            System.out.println("==========");
+//            Member member = new Member(200L, "member200");
+//            em.persist(member);
+//            // 영컨에 담음
+//            em.flush();
+//            // 여기서 바로 db에 반영되어버림
+//            System.out.println("==========");
+
+         // 준영속 상태
+            Member member = em.find(Member.class, 150L);
+            member.setName("AAAAA"); // dirty checking
+
+//            em.detach(member); // jpa에서 더이상 관리 안함!!!
+            // 더이상 update 쿼리가 안나옴
+            // 직접 쓸일은 X
+            em.clear();
+
+            // clear() 초기화 되어서 한번 더 쿼리문이 작성됨
+            Member member2 = em.find(Member.class, 150L);
+
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
