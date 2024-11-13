@@ -4,10 +4,16 @@ import RoleType.RoleType;
 import jakarta.persistence.*;
 import java.util.Date;
 @Entity(name = "MEMBER")
+//@SequenceGenerator
+//        (name = "MEMBER_SEQ_GENERATOR",
+//        sequenceName = "MEMBER_SEQ")
 public class Member {
     @Id
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+//            generator = "MEMBER_SEQ_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String username;
     private Integer age;
     @Enumerated(EnumType.STRING)
