@@ -27,5 +27,15 @@ Zsrc/main/.idea/sonarlint/securityhotspotstore/f/2/f2dbdbd4ff3892aefdab9a25b54b4
 Psrc/main/.idea/sonarlint/issuestore/f/2/f2dbdbd4ff3892aefdab9a25b54b43a44462a9d7,f/2/f2959aa24526f86f6ee235f16b37dfccc269a13e
 f
 6src/main/.idea/sonarlint/securityhotspotstore/index.pb,8/c/8c794dd2d8a4911897fd1dd51e010bc6f1ecfc48
-T
-$src/main/java/RoleType/RoleType.java,3/0/30ca6be2993503c5c0b3db86994ccc53443ee737
+W
+'src/main/java/jpabook/jpashop/Main.java,a/7/a77f11cc8a9926a1b75dcea4e73d1fbc507cfd9f
+e
+5src/main/java/jpabook/jpashop/domain/OrderStatus.java,6/2/6263648f9b5a55943c09d979922e8aaebe8b7604
+`
+0src/main/java/jpabook/jpashop/domain/Member.java,4/b/4bf907111baa3183e3e5fe7c9be862ec7da142f7
+c
+3src/main/java/jpabook/jpashop/domain/OrderItem.java,5/f/5ff98ff609f00aa390c3badb12b283b172996795
+^
+.src/main/java/jpabook/jpashop/domain/Item.java,6/0/60e3c8697fd0b451189ded1f0935445468acce54
+_
+/src/main/java/jpabook/jpashop/domain/Order.java,b/e/be11ca5f753c33204b340512509491ae2239cb4b
