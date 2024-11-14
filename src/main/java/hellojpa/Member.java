@@ -4,14 +4,15 @@ import RoleType.RoleType;
 import jakarta.persistence.*;
 import java.util.Date;
 @Entity(name = "MEMBER")
-//@SequenceGenerator
-//        (name = "MEMBER_SEQ_GENERATOR",
-//        sequenceName = "MEMBER_SEQ")
+// table 전략 -> 운영에서는 비권장
+@TableGenerator(
+        name = "MEMBER_SEQ_GENERATOR",
+        table = "MY_SEQUENCES",
+        pkColumnValue = "MEMBER_SEQ", allocationSize = 50)
 public class Member {
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE,
-//            generator = "MEMBER_SEQ_GENERATOR")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE,
+            generator = "MEMBER_SEQ_GENERATOR")
     private Long id;
     @Column(name = "name", nullable = false)
     private String username;

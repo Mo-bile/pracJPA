@@ -19,8 +19,10 @@ public class JpaMain {
             Member member2 = new Member();
             member2.setUsername("B");
 
+            System.out.println(" ===== ");
             em.persist(member);
-            em.persist(member2);
+//            em.persist(member2);
+            System.out.println(" ===== ");
 
             tx.commit();
         } catch (Exception e) {
