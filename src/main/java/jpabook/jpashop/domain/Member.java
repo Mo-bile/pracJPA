@@ -2,16 +2,25 @@ package jpabook.jpashop.domain;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "MEMBER_ID")
     private Long id;
     private String name;
     private String city;
     private String street;
     private String zipcode;
+
+    //초기값 ArrayList 사용이 관례임! NPE장점이 있음
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
+
 
     public Long getId() {
         return id;
