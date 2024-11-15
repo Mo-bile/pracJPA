@@ -1,6 +1,5 @@
 
-F	java:S106"+Replace this use of System.out by a logger.(›¹à%8üåøÓ²2
-F	java:S106"+Replace this use of System.out by a logger.(›¹à%8°šùÓ²2
-W	java:S125"<This block of commented-out lines of code should be removed.(Îˆ-8õıüÓ²2
-K
-java:S1128".Remove this unused import 'RoleType.RoleType'.(“û“Û8ıåøÓ²2
+X	java:S125"<This block of commented-out lines of code should be removed.(Ëµë’8íû®÷²2
+X	java:S125"<This block of commented-out lines of code should be removed.(ßÁé8îû®÷²2
+]	java:S125&"<This block of commented-out lines of code should be removed.(ô±¹Îüÿÿÿÿ8ıÜã÷²2
+G	java:S106*"+Replace this use of System.out by a logger.(‡ŠÌÎ8á‰¼÷²2

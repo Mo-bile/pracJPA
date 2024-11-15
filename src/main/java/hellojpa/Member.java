@@ -1,36 +1,25 @@
 package hellojpa;
-import RoleType.RoleType;
 
 import jakarta.persistence.*;
-import java.util.Date;
+
 @Entity(name = "MEMBER")
 // table 전략 -> 운영에서는 비권장
 @TableGenerator(
         name = "MEMBER_SEQ_GENERATOR",
         table = "MY_SEQUENCES",
-        pkColumnValue = "MEMBER_SEQ", allocationSize = 50)
+        pkColumnValue = "MEMBER_SEQ")
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE,
-            generator = "MEMBER_SEQ_GENERATOR")
+    @GeneratedValue
     private Long id;
-    @Column(name = "name", nullable = false)
+    @Column(name = "USERNAME")
     private String username;
-    private Integer age;
-    @Enumerated(EnumType.STRING)
-    private RoleType roleType;
+//    @Column(name = "TEAM_ID")
+//    private Long teamId;
 
-    //TemporalType 3 가지 타입이 있음
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createdDate;
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date lastModifiedDate;
-    @Lob // 큰 컨텐츠는 Lob를 넣으면 됨
-    private String description;
-
-    public Member() {
-
-    }
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
 
 
     public Long getId() {
@@ -49,44 +38,11 @@ public class Member {
         this.username = username;
     }
 
-    public Integer getAge() {
-        return age;
+    public Team getTeam() {
+        return team;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setTeam(Team team) {
+        this.team = team;
     }
-
-    public RoleType getRoleType() {
-        return roleType;
-    }
-
-    public void setRoleType(RoleType roleType) {
-        this.roleType = roleType;
-    }
-
-    public Date getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public Date getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setLastModifiedDate(Date lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
 }

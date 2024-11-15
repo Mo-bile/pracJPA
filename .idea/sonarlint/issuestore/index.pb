@@ -29,3 +29,5 @@ f
 6src/main/.idea/sonarlint/securityhotspotstore/index.pb,8/c/8c794dd2d8a4911897fd1dd51e010bc6f1ecfc48
 T
 $src/main/java/RoleType/RoleType.java,3/0/30ca6be2993503c5c0b3db86994ccc53443ee737
+P
+ src/main/java/hellojpa/Team.java,b/f/bfbac6fbffe19ced8136bfd2d23bf11518635622
