@@ -1,2 +1,8 @@
 
-L	java:S106#"+Replace this use of System.out by a logger.(«ÓÊùûÿÿÿÿ8—Ç›ø²2
+]	java:S125"<This block of commented-out lines of code should be removed.(Á×Ë²ùÿÿÿÿ8í«¡û²2
+X	java:S125"<This block of commented-out lines of code should be removed.(å®Ÿé8í«¡û²2
+X	java:S125("<This block of commented-out lines of code should be removed.(å®Ÿé8•ÙÊû²2
+]	java:S125*"<This block of commented-out lines of code should be removed.(ô±¹Îüÿÿÿÿ8»Ü°û²2
+G	java:S1061"+Replace this use of System.out by a logger.(Ô‰×8–÷¡û²2
+L	java:S1063"+Replace this use of System.out by a logger.(ış ‡üÿÿÿÿ8Õè²û²2
+G	java:S1065"+Replace this use of System.out by a logger.(Ô‰×8÷®²û²2

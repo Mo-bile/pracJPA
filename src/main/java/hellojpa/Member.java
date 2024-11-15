@@ -17,8 +17,10 @@ public class Member {
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
 
+
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
+    //연관관계 주인
     private Team team;
 
 
@@ -44,5 +46,6 @@ public class Member {
 
     public void setTeam(Team team) {
         this.team = team;
+        team.getMembers().add(this);
     }
 }

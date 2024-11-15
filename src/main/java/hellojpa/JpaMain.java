@@ -15,25 +15,42 @@ public class JpaMain {
         tx.begin();
         try {
 
+            // 이 순서로 하면 주인의 값이 입력이 안된상태
+//            Member member = new Member();
+//            member.setUsername("member");
+//            em.persist(member);
+//
+//            Team team = new Team();
+//            team.setName("TeamA");
+//            team.getMembers().add(member);
+//            em.persist(team);
+
+            //저장
             Team team = new Team();
             team.setName("TeamA");
+//            team.getMembers().add(member);
             em.persist(team);
 
             Member member = new Member();
             member.setUsername("member");
-            member.setTeam(team); //단방향 연관관계, 참조 저장
-
+            member.setTeam(team); // 주인에 값을 넣기
             em.persist(member);
-            em.flush();
-            em.clear();
 
-            Member findMember = em.find(Member.class, member.getId());
-            //멤버에서 팀으로, 팀에서 멤버로
-            List<Member> members = findMember.getTeam().getMembers();
+            //이거를 그냥 setter에 넣어주자
+//            team.getMembers().add(member);
 
-            for (Member member1 : members) {
-                System.out.println("member1.getUsername() = " + member1.getUsername());
+//            em.flush();
+//            em.clear();
+
+            //1차 캐시 flush, clear 안하면
+            Team findTeam = em.find(Team.class, team.getTeamId());
+            List<Member> members = findTeam.getMembers();
+
+            System.out.println(" =========== ");
+            for (Member m : members) {
+                System.out.println("m = " + m.getUsername());
             }
+            System.out.println(" =========== ");
 
 
             tx.commit();
