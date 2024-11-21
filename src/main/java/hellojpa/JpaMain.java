@@ -15,43 +15,19 @@ public class JpaMain {
         tx.begin();
         try {
 
-            // 이 순서로 하면 주인의 값이 입력이 안된상태
-//            Member member = new Member();
-//            member.setUsername("member");
-//            em.persist(member);
-//
-//            Team team = new Team();
-//            team.setName("TeamA");
-//            team.getMembers().add(member);
-//            em.persist(team);
-
-            //저장
-            Team team = new Team();
-            team.setName("TeamA");
-//            team.getMembers().add(member);
-            em.persist(team);
-
             Member member = new Member();
-            member.setUsername("member");
-            member.setTeam(team); // 주인에 값을 넣기
+            // 실무에서는 생성자로 빌더패턴으로 주로함
+            // setter 자신은 잘 안씀
+            member.setUsername("member3");
+
             em.persist(member);
 
-            //이거를 그냥 setter에 넣어주자
-//            team.getMembers().add(member);
-
-//            em.flush();
-//            em.clear();
-
-            //1차 캐시 flush, clear 안하면
-            Team findTeam = em.find(Team.class, team.getId());
-            List<Member> members = findTeam.getMembers();
-
-            System.out.println(" =========== ");
-            for (Member m : members) {
-                System.out.println("m = " + m.getUsername());
-            }
-            System.out.println(" =========== ");
-
+            Team team = new Team();
+            team.setName("teamC");
+            // 일대다에서 뭔가 어색함
+            //member table의 내용업뎃필요
+            team.getMembers().add(member);
+            em.persist(team);
 
             tx.commit();
         } catch (Exception e) {

@@ -16,9 +16,9 @@ public class Member {
     private String username;
 
     @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    //연관관계 주인
-    private Team team;
+    // 읽기전용으로 함 | 일대다 양방향일 때
+    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+    private Team team
 
     public Long getId() {
         return id;
@@ -36,11 +36,4 @@ public class Member {
         this.username = username;
     }
 
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
 }
