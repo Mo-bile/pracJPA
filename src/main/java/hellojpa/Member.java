@@ -18,7 +18,11 @@ public class Member {
     @ManyToOne
     // 읽기전용으로 함 | 일대다 양방향일 때
     @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
-    private Team team
+    private Team team;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
 
     public Long getId() {
         return id;
