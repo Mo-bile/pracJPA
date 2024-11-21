@@ -43,7 +43,7 @@ public class JpaMain {
 //            em.clear();
 
             //1차 캐시 flush, clear 안하면
-            Team findTeam = em.find(Team.class, team.getTeamId());
+            Team findTeam = em.find(Team.class, team.getId());
             List<Member> members = findTeam.getMembers();
 
             System.out.println(" =========== ");
