@@ -39,3 +39,13 @@ c
 .src/main/java/jpabook/jpashop/domain/Item.java,6/0/60e3c8697fd0b451189ded1f0935445468acce54
 _
 /src/main/java/jpabook/jpashop/domain/Order.java,b/e/be11ca5f753c33204b340512509491ae2239cb4b
+b
+2src/main/java/jpabook/jpashop/domain/Delivery.java,0/1/0174c94bd295bce4393b7f942a684752d1cf5e6a
+h
+8src/main/java/jpabook/jpashop/domain/DeliveryStatus.java,6/4/6464ee3d83fa647e1d123f78966b78d76ef25236
+b
+2src/main/java/jpabook/jpashop/domain/Category.java,7/c/7c325c56d88e2af5c4e8887edd3032a03187fd9c
+P
+ src/main/java/hellojpa/Team.java,b/f/bfbac6fbffe19ced8136bfd2d23bf11518635622
+^
+.src/main/java/jpabook/jpashop/domain/Team.java,6/b/6bfcc4beb94846d429c47821593d7ea50cac2118
