@@ -119,4 +119,7 @@ replay_pid*
 #Sonar generated dir
 /.sonar/
 
+.target/**/
+.idea/sonarlint/**
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,sonar,java

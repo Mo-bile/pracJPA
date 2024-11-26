@@ -2,6 +2,9 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity(name = "MEMBER")
 // table 전략 -> 운영에서는 비권장
 @TableGenerator(
@@ -23,6 +26,15 @@ public class Member {
     @OneToOne
     @JoinColumn(name = "LOCKER_ID")
     private Locker locker;
+
+//    @ManyToMany
+//    @JoinTable(name = "MEMBER_PRODUCT")
+//    private List<Product> productList = new ArrayList<>();
+
+    @OneToMany
+
+    private List<MemberProduct> memberProducts = new ArrayList<>();
+
 
     public Long getId() {
         return id;
