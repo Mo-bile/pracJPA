@@ -49,3 +49,11 @@ P
  src/main/java/hellojpa/Team.java,b/f/bfbac6fbffe19ced8136bfd2d23bf11518635622
 ^
 .src/main/java/jpabook/jpashop/domain/Team.java,6/b/6bfcc4beb94846d429c47821593d7ea50cac2118
+_
+/src/main/java/jpabook/jpashop/domain/Album.java,1/0/10194f4a27faa1838f4738f4d4443e92baa63401
+^
+.src/main/java/jpabook/jpashop/domain/Book.java,a/5/a5d2547942c6582321fb3a70f0ba877df95037b6
+_
+/src/main/java/jpabook/jpashop/domain/Movie.java,2/5/25ff6a931172ca0330936bd058327424871e3248
+d
+4src/main/java/jpabook/jpashop/domain/BaseEntity.java,e/7/e73d1ae5747079484e4207fbea913c358e3e6b06

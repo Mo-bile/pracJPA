@@ -6,13 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "D_TYPE")
+public abstract class Item extends BaseEntity{
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
     private Long id;
 
-    private String namel;
+    private String name;
 
     private int price;
     private int stockQuantity;
@@ -28,12 +30,12 @@ public class Item {
         this.id = id;
     }
 
-    public String getNamel() {
-        return namel;
+    public String getName() {
+        return name;
     }
 
-    public void setNamel(String namel) {
-        this.namel = namel;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPrice() {
