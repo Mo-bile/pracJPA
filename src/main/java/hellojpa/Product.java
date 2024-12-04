@@ -1,9 +1,6 @@
 package hellojpa;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +13,7 @@ public class Product {
 
     private String name;
 
-    @ManyToMany(mappedBy = "products")
+    @OneToMany(mappedBy = "product") // MemberProduct 의 필드 product 참조
     private List<MemberProduct> members = new ArrayList<>();
 
     public Long getId() {

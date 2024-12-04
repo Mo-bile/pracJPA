@@ -1,3 +1,10 @@
-RoleType/RoleType.class
 hellojpa/JpaMain.class
+hellojpa/Product.class
+hellojpa/Item.class
 hellojpa/Member.class
+hellojpa/Album.class
+hellojpa/Movie.class
+hellojpa/Book.class
+hellojpa/MemberProduct.class
+hellojpa/Team.class
+hellojpa/Locker.class

@@ -2,6 +2,7 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class JpaMain {
@@ -16,18 +17,41 @@ public class JpaMain {
         try {
 
             Member member = new Member();
-            // 실무에서는 생성자로 빌더패턴으로 주로함
-            // setter 자신은 잘 안씀
-            member.setUsername("member3");
+            member.setUsername("user1");
+            member.setCreatedBy("kim");
+            member.setCratedDate(LocalDateTime.now());
 
             em.persist(member);
 
-            Team team = new Team();
-            team.setName("teamC");
-            // 일대다에서 뭔가 어색함
-            //member table의 내용업뎃필요
-            team.getMembers().add(member);
-            em.persist(team);
+//            Movie movie = new Movie();
+//            movie.setDirector("A director");
+//            movie.setActor("b Actor");
+//            movie.setName("바람과 함께 사라지다");
+//            movie.setPrice(10000);
+//
+//            em.persist(movie);
+//
+            em.flush();
+            em.clear();
+
+
+//            // join 볼수 있음
+//            /*    select
+//        m1_0.id,
+//        m1_1.name,
+//        m1_1.price,
+//        m1_0.actor,
+//        m1_0.director
+//    from
+//        Movie m1_0
+//    join
+//        Item m1_1
+//            on m1_0.id=m1_1.id
+//    where
+//        m1_0.id=?*/
+//            Movie findMoive = em.find(Movie.class, movie.getId());
+//            System.out.println("findMoive = " + findMoive);
+
 
             tx.commit();
         } catch (Exception e) {

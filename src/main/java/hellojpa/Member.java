@@ -2,6 +2,7 @@ package hellojpa;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import java.util.List;
         name = "MEMBER_SEQ_GENERATOR",
         table = "MY_SEQUENCES",
         pkColumnValue = "MEMBER_SEQ")
-public class Member {
+public class Member extends BaseEntity{
     @Id
     @GeneratedValue
     private Long id;
@@ -31,8 +32,10 @@ public class Member {
 //    @JoinTable(name = "MEMBER_PRODUCT")
 //    private List<Product> productList = new ArrayList<>();
 
-    @OneToMany
 
+
+
+    @OneToMany
     private List<MemberProduct> memberProducts = new ArrayList<>();
 
 

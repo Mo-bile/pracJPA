@@ -12,7 +12,7 @@ public class MemberProduct {
     private Member member;
 
     @ManyToOne
-    @JoinColumn(name = "PRODCUT_ID")
+    @JoinColumn(name = "PRODUCT_ID")
     private Product product;
 
 
