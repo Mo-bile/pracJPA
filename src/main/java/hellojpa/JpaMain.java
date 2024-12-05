@@ -16,42 +16,47 @@ public class JpaMain {
         tx.begin();
         try {
 
-            Member member = new Member();
-            member.setUsername("user1");
-            member.setCreatedBy("kim");
-            member.setCratedDate(LocalDateTime.now());
+            Member member1 = new Member();
+            member1.setUsername("hello1");
+            em.persist(member1);
 
-            em.persist(member);
+            Member member2 = new Member();
+            member2.setUsername("hello2");
+            em.persist(member2);
 
-//            Movie movie = new Movie();
-//            movie.setDirector("A director");
-//            movie.setActor("b Actor");
-//            movie.setName("바람과 함께 사라지다");
-//            movie.setPrice(10000);
-//
-//            em.persist(movie);
-//
             em.flush();
             em.clear();
 
+            Member m1 = em.find(Member.class, member1.getId());
+            Member m2 = em.getReference(Member.class, member2.getId());
 
-//            // join 볼수 있음
-//            /*    select
-//        m1_0.id,
-//        m1_1.name,
-//        m1_1.price,
-//        m1_0.actor,
-//        m1_0.director
-//    from
-//        Movie m1_0
-//    join
-//        Item m1_1
-//            on m1_0.id=m1_1.id
-//    where
-//        m1_0.id=?*/
-//            Movie findMoive = em.find(Movie.class, movie.getId());
-//            System.out.println("findMoive = " + findMoive);
+            System.out.println("emf.getPersistenceUnitUtil().isLoaded() = "
+                    + emf.getPersistenceUnitUtil().isLoaded(m2));
+            m2.getUsername();
+            System.out.println("emf.getPersistenceUnitUtil().isLoaded() = "
+                    + emf.getPersistenceUnitUtil().isLoaded(m2));
 
+
+            // find 끼리하면 true 가 나옴
+            // getReference 면은 false 가 나옴
+            System.out.println("m1 == m2 :"+ (m1.getClass() == m2.getClass()));
+            System.out.println("m1  :"+ (m1 instanceof Member));
+            System.out.println("m1  :"+ (m2 instanceof Member));
+
+            //
+            System.out.println("m1 = " + m1.getClass());
+            Member reference = em.getReference(Member.class, member1.getId());
+            System.out.println("reference = " + reference.getClass());
+            // 일반적인 방식
+//            Member findMember = em.find(Member.class, member.getId());
+//            System.out.println("findMember.id = " + findMember.getId());
+//            System.out.println("findMember.name = " + findMember.getUsername());
+
+            //
+//            Member findMember = em.getReference(Member.class, member2.getId());
+//            //아래와 같은 실제 사용 때 쿼리문을 실행 함
+//            System.out.println("findMember = " + findMember);
+//            System.out.println("findMember.name = " + findMember.getUsername());
 
             tx.commit();
         } catch (Exception e) {

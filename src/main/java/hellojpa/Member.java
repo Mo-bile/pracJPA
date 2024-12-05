@@ -24,17 +24,6 @@ public class Member extends BaseEntity{
     @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
     private Team team;
 
-    @OneToOne
-    @JoinColumn(name = "LOCKER_ID")
-    private Locker locker;
-
-//    @ManyToMany
-//    @JoinTable(name = "MEMBER_PRODUCT")
-//    private List<Product> productList = new ArrayList<>();
-
-
-
-
     @OneToMany
     private List<MemberProduct> memberProducts = new ArrayList<>();
 
