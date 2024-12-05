@@ -19,9 +19,11 @@ public class Member extends BaseEntity{
     @Column(name = "USERNAME")
     private String username;
 
-    @ManyToOne
+//    @ManyToOne(fetch = FetchType.LAZY) // 이걸로 lazy loading
+    @ManyToOne(fetch = FetchType.EAGER) // 즉시
     // 읽기전용으로 함 | 일대다 양방향일 때
-    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+//    @JoinColumn(name = "TEAM_ID", insertable = false, updatable = false)
+    @JoinColumn(name = "TEAM_ID")
     private Team team;
 
     @OneToMany
@@ -44,4 +46,11 @@ public class Member extends BaseEntity{
         this.username = username;
     }
 
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
 }

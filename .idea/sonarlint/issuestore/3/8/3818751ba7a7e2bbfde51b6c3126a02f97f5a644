@@ -1,14 +1,7 @@
 
-L	java:S106!"+Replace this use of System.out by a logger.(§ğ–‚ÿÿÿÿÿ8Á °¹2
-L	java:S106$"+Replace this use of System.out by a logger.(§ğ–‚ÿÿÿÿÿ8Â °¹2
-G	java:S106*"+Replace this use of System.out by a logger.(¶™×Â8Â °¹2
-L	java:S106+"+Replace this use of System.out by a logger.(¦ñŞ•ùÿÿÿÿ8Ã °¹2
-G	java:S106,"+Replace this use of System.out by a logger.(§É8Ã °¹2
-G	java:S106/"+Replace this use of System.out by a logger.(²¤ÂÊ8Ã °¹2
-L	java:S1061"+Replace this use of System.out by a logger.(¡™³ƒÿÿÿÿÿ8Ä °¹2
-]	java:S1253"<This block of commented-out lines of code should be removed.(×çÆØşÿÿÿÿ8Ä °¹2
-X	java:S1258"<This block of commented-out lines of code should be removed.(€Ã“ƒ8Ä °¹2
+L	java:S106 "+Replace this use of System.out by a logger.(êÏàªıÿÿÿÿ8Å»½³¹2
+G	java:S106""+Replace this use of System.out by a logger.(¤¸û™8Å»½³¹2
 V
-java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8Æ °¹2
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8Æ»½³¹2
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8È °¹2
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Æ»½³¹2
