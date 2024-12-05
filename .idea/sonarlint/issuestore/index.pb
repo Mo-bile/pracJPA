@@ -51,3 +51,9 @@ R
 "src/main/java/hellojpa/Parent.java,4/4/44edf2283231ef941ed7d9f231ed01b376d49e57
 Q
 !src/main/java/hellojpa/Child.java,4/8/48d6c9fed6f1a2e54a6a3560ffb4d0f8d7b9aa18
+U
+%src/main/java/hellojpa/ValueMain.java,1/4/148f6c5da2041fc73bae5e8e1260a522686ae1fc
+R
+"src/main/java/hellojpa/Period.java,a/0/a0b3136a164e8bbec40efc2281f122de4175ab86
+S
+#src/main/java/hellojpa/Address.java,e/d/ed0ba483127da0c1ee616e1633db429d81762845

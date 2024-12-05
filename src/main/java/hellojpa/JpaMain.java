@@ -15,23 +15,13 @@ public class JpaMain {
 
         tx.begin();
         try {
-            Child child1 = new Child();
-            Child child2 = new Child();
 
-            Parent parent = new Parent();
-            parent.addChild(child1);
-            parent.addChild(child2);
+            Member member = new Member();
+            member.setUsername("hello");
+            member.setHomeAddress(new Address("city", "street", "10000"));
+            member.setWorkperiod(new Period());
 
-            // 3개를 호출해야... persist 가 3개가 됨 -> 번거로움 -> cascade를 쓰자
-            em.persist(parent);
-//            em.persist(child1);
-//            em.persist(child2);
-
-            em.flush();
-            em.clear();
-            Parent findParent = em.find(Parent.class, parent.getId());
-            findParent.getChildList().remove(0);
-
+            em.persist(member);
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
