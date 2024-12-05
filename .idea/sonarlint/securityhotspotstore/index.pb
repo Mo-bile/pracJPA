@@ -47,3 +47,7 @@ P
  src/main/java/hellojpa/Book.java,4/0/40e311ccbf52f9df9ec4629134747136c70691af
 V
 &src/main/java/hellojpa/BaseEntity.java,4/1/41dcd6411ea17d5fdb1caaec18e1b93eafa53cdb
+R
+"src/main/java/hellojpa/Parent.java,4/4/44edf2283231ef941ed7d9f231ed01b376d49e57
+Q
+!src/main/java/hellojpa/Child.java,4/8/48d6c9fed6f1a2e54a6a3560ffb4d0f8d7b9aa18
