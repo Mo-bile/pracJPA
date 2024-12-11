@@ -24,17 +24,21 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            List<Member> resultList = em.createQuery("select m from Member m left join m.team", Member.class)
+//            String query =
+//                    "select " +
+//                            "case when m.age <= 10 then '학생요금'" +
+//                                "when m.age >= 60 then '경로요금'" +
+//                                "     else '일반요금'" +
+//                                "end " +
+//                    "from Member m ";
+
+            String query = "select coalesce(m.username, '이름없는 회원') from Member m";
+
+            List<String> resultList = em.createQuery(query, String.class)
                     .getResultList();
-            for (Member member : resultList) {
-                System.out.println("member = " + member);
+            for (String s : resultList) {
+                System.out.println(s);
             }
-
-            System.out.println("resultList.size() = " + resultList.size());
-            for (Member member1 : resultList) {
-                System.out.println("member = " + member1);
-            }
-
 
             tx.commit();
         } catch (Exception e) {
