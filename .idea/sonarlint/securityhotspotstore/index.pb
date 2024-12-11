@@ -50,3 +50,5 @@ Q.idea/sonarlint/securityhotspotstore/9/f/9f24ef356e6b68f862086b0de6fe8df81b754b
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+Q
+!src/main/java/jpql/MemberDTO.java,a/c/ac43a7f82ea8276bfa0a61733ea6978291d24a8f
