@@ -24,10 +24,11 @@ public class JpaMain {
             em.flush();
             em.clear();
 
-            List<Member> resultList = em.createQuery("select m from Member m order by m.age desc", Member.class)
-                    .setFirstResult(1)
-                    .setMaxResults(10)
+            List<Member> resultList = em.createQuery("select m from Member m left join m.team", Member.class)
                     .getResultList();
+            for (Member member : resultList) {
+                System.out.println("member = " + member);
+            }
 
             System.out.println("resultList.size() = " + resultList.size());
             for (Member member1 : resultList) {
