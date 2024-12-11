@@ -57,3 +57,5 @@ _
 /src/main/java/jpabook/jpashop/domain/Movie.java,2/5/25ff6a931172ca0330936bd058327424871e3248
 d
 4src/main/java/jpabook/jpashop/domain/BaseEntity.java,e/7/e73d1ae5747079484e4207fbea913c358e3e6b06
+a
+1src/main/java/jpabook/jpashop/domain/Address.java,9/8/98492f6f3097d889c22d8b09f921501375c9ea99
